@@ -29,6 +29,9 @@ import { LoggerService } from './services/logger.service';
 import { AppUserService } from './services/appUser.service';
 import { AllUserComponent } from './all-user/all-user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { DataService } from './services/dataService';
 
 @NgModule({
   declarations: [
@@ -55,12 +58,14 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     AddUserComponent,
     AllUserComponent,
     UserDetailComponent,
+    Comp1Component,
+    Comp2Component,
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [EnrollService, UserService, LoggerService, AppUserService],
+  providers: [EnrollService, UserService, LoggerService, AppUserService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

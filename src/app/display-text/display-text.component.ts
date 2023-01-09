@@ -17,42 +17,42 @@ OnDestroy
   @Input() text: string = "dsds";
 
   constructor(){
-    console.log("constructor called");
+    // console.log("constructor called");
     // console.log(this.text);
   }
 
   ngOnChanges(change: SimpleChanges){
-    console.log("changes called");
+    // console.log("changes called");
     // console.log(change)
   }
 
   ngOnInit(){
-    console.log("ngOnInit called");
+    // console.log("ngOnInit called");
     // console.log(this.text);
   }
 
   ngDoCheck(){
-    console.log("ngDoCheck called");
+    // console.log("ngDoCheck called");
   }
 
   ngAfterContentInit(){
-    console.log("ngAfterContentInit called");
+    // console.log("ngAfterContentInit called");
   }
 
   ngAfterContentChecked(){
-    console.log("ngAfterContentChecked called");
+    // console.log("ngAfterContentChecked called");
   }
 
   ngAfterViewInit(){
-    console.log("ngAfterViewInit called");
+    // console.log("ngAfterViewInit called");
   }
 
   ngAfterViewChecked(){
-    console.log("ngAfterViewChecked called");
+    // console.log("ngAfterViewChecked called");
   }
 
   ngOnDestroy(){
-    console.log("ngOnDestroy called");
+    // console.log("ngOnDestroy called");
 
   }
 }
