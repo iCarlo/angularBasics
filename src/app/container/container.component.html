@@ -38,4 +38,25 @@
         <p *ngSwitchCase="'sales'">Occupation is sales</p>
         <p *ngSwitchDefault>defaulf</p>
     </div>
+
+    <div class="course-container">
+        <app-javascript></app-javascript>
+        <app-angular></app-angular>
+    </div>
+
+    <div class="container user-container">
+        <app-add-user></app-add-user>
+        <div class="user-div" *ngFor="let user of users">
+            <div class="user-name">{{user.name}}</div>
+            <div class="user-status">{{user.status}}</div>
+        </div>
+    </div>
+
+    <div class="details-container">
+        <div>
+            <h3>All App Users</h3>
+            <app-all-user></app-all-user>
+            <app-user-detail></app-user-detail>
+        </div>
+    </div>
 </div>

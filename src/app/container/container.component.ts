@@ -1,12 +1,14 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { AppUserService } from "../services/appUser.service";
+import { UserService } from "../services/user.service";
 
 @Component({
     selector: 'app-container',
     templateUrl: './container.component.html',
-    styleUrls: ['./container.component.css']
-
+    styleUrls: ['./container.component.css'],
+    // providers: [UserService]
 })
-export class ContainerComponent {
+export class ContainerComponent implements OnInit {
 
     inputValue: string = "";
 
@@ -15,6 +17,14 @@ export class ContainerComponent {
     displayNotice : boolean = false;
 
     occupation: string = "pilot";
+
+    users: {name: string, status: string}[] = [];
+
+    constructor(private userService: UserService, private appUser: AppUserService){}
+
+    ngOnInit(){
+        this.users = this.userService.users;
+    }
 
     onSubmit(text:string){
         this.inputValue = text;

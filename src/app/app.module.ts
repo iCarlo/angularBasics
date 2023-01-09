@@ -20,6 +20,15 @@ import { BetterHighlightDirective } from './custom-directive/better-highlight.di
 import { ClassDirective } from './custom-directive/class.directive';
 import { StyleDirective } from './custom-directive/style.directive';
 import { IfDirective } from './custom-directive/if.directive';
+import { AngularComponent } from './angular/angular.component';
+import { JavascriptComponent } from './javascript/javascript.component';
+import { EnrollService } from './services/enroll.service';
+import { AddUserComponent } from './add-user/add-user.component';
+import { UserService } from './services/user.service';
+import { LoggerService } from './services/logger.service';
+import { AppUserService } from './services/appUser.service';
+import { AllUserComponent } from './all-user/all-user.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +50,17 @@ import { IfDirective } from './custom-directive/if.directive';
     ClassDirective,
     StyleDirective,
     IfDirective,
+    AngularComponent,
+    JavascriptComponent,
+    AddUserComponent,
+    AllUserComponent,
+    UserDetailComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EnrollService, UserService, LoggerService, AppUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
