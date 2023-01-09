@@ -1,6 +1,13 @@
+<app-search (searchTextChanged)="onSearchedText($event)"></app-search>
+<app-filter
+    [all]="getTotalProducts()"
+    [available]="getTotalAvailableProducts()"
+    [notAvailable]="getTotalNotAvailableProducts()"
+    (filterEventEmitter)="filterProducts($event)"
+></app-filter>
 <div *ngFor="let n of products; let i = index">
     <!-- <p>{{i}}</p> -->
-    <div class="product-container" [ngStyle]="{backgroundColor: n.available === 'Available' ? '#D5F5E3' : '#FADBD8'}">
+    <div class="product-container" *ngIf="(currentFilterValue === 'All' || currentFilterValue === n.available) && n.name.toLowerCase().includes(searchedText)" [ngStyle]="{backgroundColor: n.available === 'Available' ? '#D5F5E3' : '#FADBD8'}">
         <div class="image-container">
             <img [src]="n.image" alt="" style="max-height: 50px; max-width: 50px;">
         </div>

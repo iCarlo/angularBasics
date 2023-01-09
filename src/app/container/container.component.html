@@ -2,6 +2,40 @@
     <div class="app-nav"></div>
     <app-header></app-header>
     <app-notification></app-notification>
-    <app-search></app-search>
+
     <app-products></app-products>
+
+    <app-date-of-birth></app-date-of-birth>
+
+    <input type="text" name="" id="" #inputText>
+    <button type="submit" (click)="onSubmit(inputText.value)">Submit</button>
+    <app-display-text *ngIf="!destroy" [text]="inputValue"><h4>projected content with input: {{inputValue}}</h4></app-display-text>
+    <button (click)="onDestroy()">Destroy</button>
+
+    <div>
+        <button class="btn btn-notice" (click)="onDisplayNotice()">Show Notice</button>
+    <div class="info-container notice" *appIf="displayNotice">
+        <h3>This is important notice!</h3>
+        <p>Thi is a notice issued for all website users</p>
+    </div>
+    <ng-template #subNotice>
+        <p>Substitute notice</p>
+    </ng-template> 
+    <!-- <ng-template [ngIf]="displayNotice" >
+        <div class="info-container notice" >
+            <h3>This is important notice!</h3>
+            <p>Thi is a notice issued for all website users</p>
+        </div> 
+    </ng-template> -->
+    <!-- <ng-template #subNotice>
+        <p>Substitute notice</p>
+    </ng-template>  -->
+    </div>
+
+    <div class="container" [ngSwitch]="occupation">
+        <p *ngSwitchCase="'teacher'">Occupation is teacher</p>
+        <p *ngSwitchCase="'engineer'">Occupation is engineer</p>
+        <p *ngSwitchCase="'sales'">Occupation is sales</p>
+        <p *ngSwitchDefault>defaulf</p>
+    </div>
 </div>

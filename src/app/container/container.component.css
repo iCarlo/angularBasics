@@ -2,3 +2,28 @@
     margin: 0px auto;
     width: 820px;
 }
+
+.info-container {
+    margin: 10px 30px;
+    padding: 10px 30px;
+}
+
+.notice {
+    background-color: #C8E6C9;
+}
+
+.btn {
+    width: 120px;
+    height: 35px;
+    border: none;
+}
+
+.btn-notice {
+    margin: 10px 30px;
+    background-color: #F5B041;
+}
+
+.container {
+    padding: 20px;
+    background-color: aquamarine;
+}

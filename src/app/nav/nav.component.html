@@ -1,12 +1,12 @@
-<div class="navbar">
+<div class="navbar" appBetterHighlight="yellow">
     <div class="site-name">
         <h2>eShopping</h2>
     </div>
     <div class="site-menu">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">CONTACT</a>
-        <a href="#">CART</a>
-        <a href="#">PRODUCTS</a>
+        <app-nav-item><span #home>HOME</span></app-nav-item>
+        <app-nav-item><span>ABOUT</span></app-nav-item>
+        <app-nav-item><span>CONTACT</span></app-nav-item>
+        <app-nav-item><span>CART</span></app-nav-item>
+        <app-nav-item><span  [appStyle]="{backgroundColor: 'pink', fontWeight: 'bold'}">PRODUCTS</span></app-nav-item>
     </div>
 </div>
